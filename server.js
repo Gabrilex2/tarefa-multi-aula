@@ -16,3 +16,7 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+const apiRoutes = requre('./routes/api');
+app.use(express.json());
+app.use('/api/users', apiRoutes);
